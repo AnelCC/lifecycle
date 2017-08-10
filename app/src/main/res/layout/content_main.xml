@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="cc.anel.myapplication.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_lauched"
+            style="@style/AppTheme.NoActionBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/btn_launched"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/btn_on_create"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/AppTheme.NoActionBar"
+            app:layout_constraintHorizontal_bias="0.505"
+            android:layout_marginTop="16dp"
+            android:onClick="setInfoOnCreate"
+            app:layout_constraintTop_toBottomOf="@+id/btn_lauched" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/btn_on_start"
+            android:onClick="setInfoOnStart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2"
+            style="@style/AppTheme.NoActionBar" />
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/AppTheme.NoActionBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/btn_on_resume"
+            android:onClick="setInfoOnResume"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+        <Button
+            android:id="@+id/btn_running"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/btn_activity_running"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button6"
+            android:background="@color/colorAccent"
+            style="@style/AppTheme.NoActionBar" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_on_pause"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_running"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            style="@style/AppTheme.NoActionBar"
+            android:onClick="setInfoOnPause"/>
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_on_stop"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/button8"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            style="@style/AppTheme.NoActionBar"
+            android:onClick="setInfoOnStop"/>
+
+        <ScrollView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/btn_lauched"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView6">
+            <TextView
+                android:id="@+id/txt_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/action_settings3"
+                android:textColor="@color/colorBlue" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_log"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/btn_lauched"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintHorizontal_bias="0.505" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_on_destroy"
+            style="@style/AppTheme.NoActionBar"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/button9"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:onClick="setInfoOnDestroy" />
+
+        <Button
+            android:id="@+id/btn_shut"
+            style="@style/AppTheme.NoActionBar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRed"
+            android:text="@string/btn_shut_down"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/btn_on_restart"
+            app:layout_constraintLeft_toRightOf="@+id/button5"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/AppTheme.NoActionBar"
+            app:layout_constraintHorizontal_bias="0.562"
+            app:layout_constraintTop_toTopOf="@+id/button5"
+            android:layout_marginTop="8dp"
+            android:onClick="setInfoOnRestart"/>
+
+        <Button
+            android:id="@+id/btn_killed"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/btn_kill"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button2"
+            style="@style/AppTheme.NoActionBar"
+            app:layout_constraintTop_toTopOf="@+id/btn_running"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorRedDark"/>
+
+        <ScrollView
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btn_lauched"
+            android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/txt_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/action_settings4" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_new_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_settings6"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/button12"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/button6"
+            android:layout_marginLeft="8dp"
+            style="@style/AppTheme.NoActionBar"
+            android:background="@color/colorAccent"
+            android:visibility="gone"
+            android:onClick="goSecondActivity"/>
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

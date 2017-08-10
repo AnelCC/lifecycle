@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="action_settings1">Account</string>
+    <string name="action_settings2">History</string>
+    <string name="action_settings3">Help</string>
+    <string name="action_settings4">Info</string>
+    <string name="action_settings5">Exit</string>
+    <string name="action_settings6">New Activity</string>
+
+
+    <string name="txt_log">Log</string>
+    <string name="btn_launched">Launched</string>
+    <string name="btn_on_create">onCreate()</string>
+    <string name="btn_on_start">onStart()</string>
+    <string name="btn_on_resume">onResume()</string>
+    <string name="btn_activity_running">Activity Running</string>
+    <string name="btn_on_pause">onPause()</string>
+    <string name="btn_on_stop">onStop()</string>
+    <string name="btn_on_destroy">onDestroy()</string>
+    <string name="btn_on_restart">onRestart()</string>
+    <string name="btn_shut_down">Activity Shut Down</string>
+    <string name="btn_kill">App Process Killed</string>
+
+
+    <string name="info_running">You are currently running the application</string>
+    <string name="info_press_new">Press the "New Activity" button</string>
+    <string name="info_press">Press the Home button and return to the application, the Log will show you how they are called</string>
+    <string name="info_second_activity">At this moment your first activity is paused, because the activity that is running is this new activity.</string>
+    <string name="info_return">Now go back and check the log...</string>
+
+
+    <string name="info_create">onCreate(). Your implementation should initialize the essential components of your activity:
+        For example, your app should create views and bind data to lists here.</string>
+
+    <string name="info_start">In onStart(), the activity enters the Started state,
+        and the activity becomes visible to the user.
+        This callback contains what amounts to the activity’s final preparations.</string>
+
+    <string name="info_resume"> The system invokes this callback just before
+        the activity starts interacting with the user.
+        Most of an app’s core functionality is implemented in the onResume() method.</string>
+
+    <string name="info_pause">  The system calls onPause() when the activity loses focus and enters a Paused state.
+        This state occurs when, for example, the user taps the Back or Overlay button.
+        When the system calls onPause() for your activity, it technically means your activity is still partially visible,
+        but most often is an indication that the user is leaving the activity,
+        and the activity will soon enter the Stopped or Resumed state.
+
+        An activity in the Paused state may continue to update the UI if the user is expecting the UI to update.
+        Examples of such an activity include one showing a navigation map screen or a media player playing.
+        Even if such activities lose focus, the user expects their UI to continue updating.</string>
+
+
+    <string name="info_stop">The system calls onStop() when the activity is no longer visible to the user.
+        This may happen because the activity is being destroyed, a new activity is starting,
+        or an existing activity is entering a Resumed state and is covering the stopped activity.
+        In all of these cases, the stopped activity is no longer visible at all.
+
+        The next callback that the system calls is either onRestart(), if the activity is coming back to
+        interact with the user, or by onDestroy() if this activity is completely terminating.</string>
+
+    <string name="info_restart">The system invokes this callback when an activity in the Stopped state is
+        about to restart. onRestart() restores the state of the activity from the time that it was stopped.</string>
+
+    <string name="info_destroy">The system invokes this callback before an activity is destroyed.
+        This callback is the final one that the activity receives. onDestroy() is usually implemented
+        to ensure that all of an activity’sresources are released when the activity,
+        or the process containing it, is destroyed.</string>
+
+
+</resources>
